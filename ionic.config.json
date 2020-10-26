@@ -1,0 +1,7 @@
+{
+  "name": "MeuNutricionista",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

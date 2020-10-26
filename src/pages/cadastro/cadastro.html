@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>    
+    <ion-title text-center>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header> 
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Peso</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Altura</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select [(ngModel)]="sexo">
+        <ion-option value="M">Masculino</ion-option>
+        <ion-option value="F">Feminino</ion-option>
+      </ion-select>
+    </ion-item>    
+	
+	<ion-item>
+      <ion-label>Nível de Atividade Física</ion-label>
+      <ion-select [(ngModel)]="fisica">
+        <ion-option value="1">Sedentário</ion-option>
+        <ion-option value="2">Leve</ion-option>
+        <ion-option value="3">Moderado</ion-option>
+        <ion-option value="4">Intenso</ion-option>
+      </ion-select>
+    </ion-item>    
+  
+  </ion-list>
+
+  <div padding>
+    <button ion-button full>Salvar</button>
+  </div>
+
+</ion-content>

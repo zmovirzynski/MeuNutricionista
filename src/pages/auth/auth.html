@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>NutriHelp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<img src="../../assets/logo.jpg" alt="Smiley face"><br>
+	<form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)">
+        <ion-item>
+			
+            <ion-label floating>Usuário</ion-label>
+            <ion-input formControlName="username" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="authForm.controls.username.hasError('required') && authForm.controls.username.touched">
+            <p>Campo Obrigatório!</p>
+        </ion-item>
+        <ion-item *ngIf="authForm.controls.username.hasError('pattern') && authForm.controls.username.touched">
+            <p>Somente letras são permitidas!</p>
+        </ion-item>        
+        <ion-item *ngIf="authForm.controls.username.hasError('minlength') && authForm.controls.username.touched">
+            <p>Mínimo 8 caracteres!</p>
+        </ion-item>
+        <ion-item *ngIf="authForm.controls.username.hasError('maxlength') && authForm.controls.username.touched">
+            <p>Máximo 30 caracteres!</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Senha</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="authForm.controls.password.hasError('required') && authForm.controls.password.touched">
+            <p>Campo Obrigatório!</p>
+        </ion-item>
+        <ion-item *ngIf="authForm.controls.password.hasError('minlength') && authForm.controls.password.touched">
+            <p>Mínimo 8 caracteres!</p>
+        </ion-item>                
+
+		<button ion-button full color="primary" [disabled]="!authForm.valid" style="margin-top: 20px;" type="submit">Entrar</button>        
+	</form>
+</ion-content>
