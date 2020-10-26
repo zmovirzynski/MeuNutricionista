@@ -1,3 +1,5 @@
+Trata-se de estudo realizado para desenvolvimento de um aplicativo de avaliação nutricional que fornecerá informações didáticas sobre suplementação, com foco em praticantes de exercícios físicos.
+
 Siga as instruções para fazer deploy das landing pages:
 
 1. git clone https://github.com/zmovirzynski/MeuNutricionista.git
